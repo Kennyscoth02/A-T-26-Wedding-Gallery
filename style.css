@@ -1,0 +1,181 @@
+/* ===============================
+   CSS RESET
+================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   ROOT VARIABLES
+================================= */
+:root {
+  --bg: #fbf9f6;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #b8860b;
+  --card-bg: #ffffff;
+}
+
+/* ===============================
+   BASE STYLES
+================================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+}
+
+.hashtag {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.date {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.tagline {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* ===============================
+   UPLOAD SECTION
+================================= */
+.upload-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #fdfaf6, #f7efe5);
+}
+
+.upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: center;
+}
+
+.upload-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.upload-content p {
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* QR */
+.qr-wrapper {
+  text-align: center;
+}
+
+.qr-image {
+  width: 250px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   GALLERY
+================================= */
+.gallery {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+
+.gallery-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  background: #222f3e;
+  color: #cbcbcb;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer .hashtag {
+  margin: 10px 0;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 900px) {
+  .upload-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
